@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  Constants.swift
 //  Mint
 //
 //  Created by Mustafa GUNES on 30.11.2019.
@@ -8,5 +8,4 @@
 
 import Foundation
 
-print("Hello, World!")
-
+let PATTERN = "\\s*\"(.*)\"\\s*=\\s*\"(.*)\"\\s*;"

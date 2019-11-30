@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  NewLaurine-Exam
+
+  Created by Mustafa GUNES on 17.11.2019.
+  Copyright © 2019 Mustafa GUNES. All rights reserved.
+*/
+
+
+// Common.Ok
+"common_ok" = "Ok";
+// Common.HaveQuestion
+"common_have_question" = "Do you have a question?";
+// Login.RegisterTitle
+"login_screen_register_title" = "Register";
+"login_screen_register_title_too_long_text" = "Register";
