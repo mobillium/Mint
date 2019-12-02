@@ -20,10 +20,10 @@ struct Translate {
     
     public func getScreenName() -> String {
         var screenName = ""
-        if key.starts(with: "common_") {
-            screenName = "common"
-        } else if key.contains("_screen") {
-            screenName = key.components(separatedBy: "_screen_").first!
+        if key.starts(with: COMMON_) {
+            screenName = COMMON
+        } else if key.contains(SCREEN) {
+            screenName = key.components(separatedBy: SCREEN).first!
         } else {
             print("Invalid format.")
         }
@@ -32,10 +32,10 @@ struct Translate {
     
     public func getAttributeName() -> String {
         var screenName = ""
-        if key.starts(with: "common") {
-            screenName = key.components(separatedBy: "common_").last!
-        } else if key.contains("_screen") {
-            screenName = key.components(separatedBy: "_screen_").last!
+        if key.starts(with: COMMON) {
+            screenName = key.components(separatedBy: COMMON_).last!
+        } else if key.contains(SCREEN) {
+            screenName = key.components(separatedBy: SCREEN).last!
         } else {
             print("Invalid format.")
         }
