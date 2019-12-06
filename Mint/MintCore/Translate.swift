@@ -31,14 +31,14 @@ struct Translate {
     }
     
     public func getAttributeName() -> String {
-        var screenName = ""
+        var attributeName = ""
         if key.starts(with: COMMON) {
-            screenName = key.components(separatedBy: COMMON_).last!
+            attributeName = key.components(separatedBy: COMMON_).last!
         } else if key.contains(SCREEN) {
-            screenName = key.components(separatedBy: SCREEN).last!
+            attributeName = key.components(separatedBy: SCREEN).last!
         } else {
             print("Invalid format.")
         }
-        return screenName
+        return attributeName
     }
 }
