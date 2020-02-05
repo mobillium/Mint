@@ -11,6 +11,7 @@
 "common_ok" = "Ok";
 // Common.HaveQuestion
 "common_have_question" = "Do you have a question?";
+
 // Login.RegisterTitle
 "login_screen_register_title" = "Register Title";
 "login_screen_register_title_too_long_text" = "Register Long Text";

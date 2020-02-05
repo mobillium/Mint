@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D93E242523E80EEE00E8F18A /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E242423E80EEE00E8F18A /* Generated.swift */; };
+		D93E242623E8112B00E8F18A /* Generated.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = D93E242423E80EEE00E8F18A /* Generated.swift */; };
 		D989C3112392A8AC00A2DBBE /* Localizable.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9A603FA2392A80600F1F6D5 /* Localizable.strings */; };
 		D989C3132392B1D000A2DBBE /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989C3122392B1D000A2DBBE /* FileHandler.swift */; };
 		D989C3152392B31100A2DBBE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989C3142392B31100A2DBBE /* Extensions.swift */; };
@@ -24,6 +26,7 @@
 			dstPath = .;
 			dstSubfolderSpec = 16;
 			files = (
+				D93E242623E8112B00E8F18A /* Generated.swift in CopyFiles */,
 				D989C3112392A8AC00A2DBBE /* Localizable.strings in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D93E242423E80EEE00E8F18A /* Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generated.swift; sourceTree = "<group>"; };
 		D989C3122392B1D000A2DBBE /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 		D989C3142392B31100A2DBBE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D989C3162392B35400A2DBBE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				D9A603FA2392A80600F1F6D5 /* Localizable.strings */,
+				D93E242423E80EEE00E8F18A /* Generated.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D989C3132392B1D000A2DBBE /* FileHandler.swift in Sources */,
+				D93E242523E80EEE00E8F18A /* Generated.swift in Sources */,
 				D989C3152392B31100A2DBBE /* Extensions.swift in Sources */,
 				D9A603F12392A52900F1F6D5 /* main.swift in Sources */,
 				D989C31B2392B47D00A2DBBE /* Mint.swift in Sources */,

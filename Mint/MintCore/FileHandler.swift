@@ -16,4 +16,20 @@ class FileHandler {
         let content = try! String(contentsOf: fileUrl)
         return content
     }
+    
+    static func writeOutput(swift: String) throws {
+        let doWrite = {
+            try swift.write(to: URL(string: "file:///Users/mustafagunes/Desktop/PROJELER/Mint/Mint/Resource/Generated.swift")!, atomically: true, encoding: .utf8)
+        }
+
+        try doWrite()
+//        if let fileData = readFile() {
+//            // Only write if there was a change
+//            if existingSwift != swift {
+//                try doWrite()
+//            }
+//        } else {
+//            try doWrite()
+//        }
+    }
 }
