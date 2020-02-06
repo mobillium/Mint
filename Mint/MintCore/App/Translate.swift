@@ -25,7 +25,8 @@ public struct Translate {
         } else if key.contains(SCREEN) {
             screenName = key.components(separatedBy: SCREEN).first!
         } else {
-            print("Invalid format.")
+            Logger.log(output: "Invalid screen name format.")
+            MintError.customMessage("Invalid screen name format.")
         }
         return screenName.split(separator: "_").map({$0.capitalized}).joined()
     }
@@ -37,7 +38,8 @@ public struct Translate {
         } else if key.contains(SCREEN) {
             attributeName = key.components(separatedBy: SCREEN).last!
         } else {
-            print("Invalid format.")
+            Logger.log(output: "Invalid attribute name format.")
+            MintError.customMessage("Invalid screen name format.")
         }
         return attributeName.split(separator: "_").map({$0.capitalized}).joined()
     }
