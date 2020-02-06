@@ -36,7 +36,7 @@ public class OutputGenerator {
     }
     
     public func append(_ screenName: String, _ translates: [Translate]) {
-        append("// MARK: - \(screenName)", depth: 1)
+        append("// MARK: - \(screenName) Keys", depth: 1)
         append("public struct \(screenName) {", depth: 1, newLineCount: 2)
         for translate in translates {
             append(translate)

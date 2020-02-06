@@ -8,7 +8,7 @@ import Foundation
 // MARK: - Localizations
 public struct Localizations {
 
-	// MARK: - Common
+	// MARK: - Common Keys
 	public struct Common {
 
 		/// Base translation: Ok
@@ -27,7 +27,7 @@ public struct Localizations {
 
 	}
 
-	// MARK: - Home
+	// MARK: - Home Keys
 	public struct Home {
 
 		/// Base translation: Home
@@ -35,7 +35,7 @@ public struct Localizations {
 
 	}
 
-	// MARK: - Login
+	// MARK: - Login Keys
 	public struct Login {
 
 		/// Base translation: Register Title
@@ -61,7 +61,7 @@ public struct Localizations {
 
 	}
 
-	// MARK: - Profile
+	// MARK: - Profile Keys
 	public struct Profile {
 
 		/// Base translation: Profile
@@ -69,7 +69,7 @@ public struct Localizations {
 
 	}
 
-	// MARK: - Register
+	// MARK: - Register Keys
 	public struct Register {
 
 		/// Base translation: Register
@@ -77,7 +77,7 @@ public struct Localizations {
 
 	}
 
-	// MARK: - UserDetail
+	// MARK: - UserDetail Keys
 	public struct UserDetail {
 
 		/// Base translation: User Detail
