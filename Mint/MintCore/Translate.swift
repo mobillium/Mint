@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Translate {
+public struct Translate {
     
     var key: String
     var value: String
@@ -27,7 +27,7 @@ struct Translate {
         } else {
             print("Invalid format.")
         }
-        return screenName
+        return screenName.split(separator: "_").map({$0.capitalized}).joined()
     }
     
     public func getAttributeName() -> String {
@@ -39,6 +39,14 @@ struct Translate {
         } else {
             print("Invalid format.")
         }
-        return attributeName
+        return attributeName.split(separator: "_").map({$0.capitalized}).joined()
+    }
+    
+    public func hasParameters() -> Bool {
+        return !getParameters().isEmpty
+    }
+    
+    public func getParameters() -> [String] {
+        return value.match(PARAMETERS).map({$0[1]})
     }
 }

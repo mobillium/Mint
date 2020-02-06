@@ -11,23 +11,40 @@ import Foundation
 class Mint {
     
     static func run() throws {
-        
+        do {
+            try FileHandler.writeOutput(swift: Mint.generateInputs())
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    static func generateInputs() -> String {
         let content = FileHandler.readFile()
         let lines = content.components(separatedBy: CharacterSet.newlines)
         let results = content.match(PATTERN)
+
+        let keyValues: [Translate] = Mint.translateModel(outputPattern: results)
+        let dictionary = Mint.parsedDictionary(values: keyValues)
         
         Logger.log(title: "CONTENTS", output: content)
         Logger.log(title: "LINES", output: lines)
         Logger.log(title: "RESULTS", output: results)
-        
-        let keyValues: [Translate] = Mint.translateModel(outputPattern: results)
-        let parsedDictionary: [String: [String: String]] = Mint.parsedDictionary(values: keyValues)
-        
-        do {
-            try FileHandler.writeOutput(swift: Generator.generate(keyValues: parsedDictionary))
-        } catch {
-            fatalError(error.localizedDescription)
+        Logger.log(title: "dictionary", output: dictionary)
+
+        for screen in dictionary {
+            Logger.log(title: nil, output: "- " + screen.key)
+            for translate in screen.value {
+                Logger.log(title: nil, output: "-- " +  translate.getAttributeName())
+            }
         }
+        
+        let output = OutputGenerator()
+        output.append("public struct Localizations {", newLineCount: 2)
+        for screen in dictionary {
+            output.append(screen.key, screen.value)
+        }
+        output.append("}")
+        return output.content
     }
     
     static func translateModel(outputPattern: [[String]]) -> [Translate] {
@@ -41,20 +58,12 @@ class Mint {
         return values
     }
     
-    static func parsedDictionary(values: [Translate]) -> [String: [String: String]] {
-        var dict: [String: [String: String]] = [:]
-        for keyValue in values {
-            let screenName = keyValue.getScreenName()
-            let attributeName = keyValue.getAttributeName()
-            let value = keyValue.value
-            
-            if dict[screenName] == nil {
-                dict[screenName] = [:]
-            }
-            
-            dict[screenName]![attributeName] = value
-            Logger.log(title: "MAPPEDKEYS", output: dict)
-        }
-        return dict
+    static func parsedDictionary(values: [Translate]) -> [(key: String, value: [Translate])] {
+        let dictionary = Dictionary(grouping: values, by: { $0.getScreenName() }).sorted(by: {
+            if $0.key == "Common" { return true }
+            if $1.key == "Common" { return false }
+            return $0.key < $1.key
+        })
+        return dictionary
     }
 }
