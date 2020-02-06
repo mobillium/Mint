@@ -19,7 +19,8 @@ class FileHandler {
     
     static func writeOutput(swift: String) throws {
         let doWrite = {
-            try swift.write(to: URL(string: "file:///Users/mustafagunes/Desktop/PROJELER/Mint/Mint/Resource/Generated.swift")!, atomically: true, encoding: .utf8)
+            let filePath = URL(string: "file:///Users/mustafagunes/Desktop/PROJELER/Mint/Mint/Resource/Generated.swift")!
+            try swift.write(to: filePath, atomically: true, encoding: .utf8)
         }
         try doWrite()
     }

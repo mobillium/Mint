@@ -9,9 +9,23 @@
 
 // Common.Ok
 "common_ok" = "Ok";
-// Common.HaveQuestion
 "common_have_question" = "Do you have a question?";
+"common_error_empty_field" = "fields must be at between {min} - {max} characters";
 
 // Login.RegisterTitle
 "login_screen_register_title" = "Register Title";
 "login_screen_register_title_too_long_text" = "Register Long Text";
+"login_screen_register_field_required" = "{field} is required.";
+"login_screen_register_field_min" = "{field} should be at least {min} character.";
+
+// User
+"user_detail_screen_title" = "User Detail";
+
+// Register Screen
+"register_screen_title" = "Register";
+
+// Profile Screen
+"profile_screen_title" = "Profile";
+
+// Home Screen
+"home_screen_title" = "Home";

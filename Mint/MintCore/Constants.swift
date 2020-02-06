@@ -16,3 +16,5 @@ let COMMON = "common"
 let SCREEN = "_screen_"
 /// \\s*\"(.*)\"\\s*=\\s*\"(.*)\"\\s*;
 let PATTERN = "\\s*\"(.*)\"\\s*=\\s*\"(.*)\"\\s*;"
+/// \\{([^\\}*]+)\\}
+let PARAMETERS = "\\{([^\\}*]+)\\}"
