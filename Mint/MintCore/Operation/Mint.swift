@@ -10,22 +10,31 @@ import Foundation
 
 class Mint {
     
-    static func run() throws {
-        do {
-            try FileHandler.writeOutput(swift: Mint.generateInputs())
-        } catch {
-            fatalError(error.localizedDescription)
+    static func run(withArguments rawArguments: [String]) throws {
+        guard let arguments = CommandlineParser.parse(arguments: rawArguments) else {
+            throw MintError.customMessage(ANSIColors.red.rawValue + "Usage: -i <path to Localizable.strings file> -o <path including file name to write Swift to>")
         }
+
+        guard FileHandler.readFile(from: arguments) != nil else {
+            throw MintError.customMessage(ANSIColors.red.rawValue + "Couldn't read files. Did you type your arguments incorrectly?")
+        }
+
+        try FileHandler.writeOutput(outputString: Mint.generateInputs(path: arguments), to: arguments)
     }
     
-    static func generateInputs() -> String {
-        let content = FileHandler.readFile()
+    static func generateInputs(path: Commandline) throws -> String {
+        
+        guard let content = FileHandler.readFile(from: path)?.input else {
+            throw MintError.customMessage(ANSIColors.red.rawValue + "The file could not be read")
+        }
+        
         let lines = content.components(separatedBy: CharacterSet.newlines)
         let results = content.match(PATTERN)
 
         let keyValues: [Translate] = Mint.translateModel(outputPattern: results)
         let dictionary = Mint.parsedDictionary(values: keyValues)
         
+        #if DEBUG
         Logger.log(title: "CONTENTS", output: content)
         Logger.log(title: "LINES", output: lines)
         Logger.log(title: "RESULTS", output: results)
@@ -34,9 +43,10 @@ class Mint {
         for screen in dictionary {
             Logger.log(title: nil, output: "- " + screen.key)
             for translate in screen.value {
-                Logger.log(title: nil, output: "-- " +  translate.getAttributeName())
+                Logger.log(output: "-- " +  translate.getAttributeName())
             }
         }
+        #endif
         
         let output = OutputGenerator()
         output.append("public struct Localizations {", newLineCount: 2)

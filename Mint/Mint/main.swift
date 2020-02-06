@@ -9,7 +9,7 @@
 import Foundation
 
 do {
-    try Mint.run()
+    try Mint.run(withArguments: CommandLine.arguments)
 } catch {
     fatalError(error.localizedDescription)
 }

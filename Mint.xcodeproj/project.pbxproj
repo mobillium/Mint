@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92A64E123EC52090089C0A5 /* CommandlineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A64E023EC52090089C0A5 /* CommandlineParser.swift */; };
+		D92A64E323EC59670089C0A5 /* MintError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A64E223EC59670089C0A5 /* MintError.swift */; };
 		D93E242523E80EEE00E8F18A /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E242423E80EEE00E8F18A /* Generated.swift */; };
 		D93E242623E8112B00E8F18A /* Generated.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = D93E242423E80EEE00E8F18A /* Generated.swift */; };
 		D976513523EC0B350071876B /* OutputGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976513423EC0B350071876B /* OutputGenerator.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D92A64E023EC52090089C0A5 /* CommandlineParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandlineParser.swift; sourceTree = "<group>"; };
+		D92A64E223EC59670089C0A5 /* MintError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintError.swift; sourceTree = "<group>"; };
 		D93E242423E80EEE00E8F18A /* Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generated.swift; sourceTree = "<group>"; };
 		D976513423EC0B350071876B /* OutputGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputGenerator.swift; sourceTree = "<group>"; };
 		D989C3122392B1D000A2DBBE /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
@@ -59,6 +63,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D92A64E423EC5AC40089C0A5 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				D989C31A2392B47D00A2DBBE /* Mint.swift */,
+				D989C3122392B1D000A2DBBE /* FileHandler.swift */,
+				D976513423EC0B350071876B /* OutputGenerator.swift */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		D92A64E523EC5AC70089C0A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D989C3162392B35400A2DBBE /* Constants.swift */,
+				D989C3182392B3D100A2DBBE /* Translate.swift */,
+				D989C3142392B31100A2DBBE /* Extensions.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D92A64E623EC5ACA0089C0A5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D92A64E023EC52090089C0A5 /* CommandlineParser.swift */,
+				D989C31C2392B5CD00A2DBBE /* Logger.swift */,
+				D92A64E223EC59670089C0A5 /* MintError.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		D9A603E42392A52900F1F6D5 = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +130,9 @@
 		D9A603F82392A7B000F1F6D5 /* MintCore */ = {
 			isa = PBXGroup;
 			children = (
-				D989C31A2392B47D00A2DBBE /* Mint.swift */,
-				D989C3122392B1D000A2DBBE /* FileHandler.swift */,
-				D976513423EC0B350071876B /* OutputGenerator.swift */,
-				D989C3182392B3D100A2DBBE /* Translate.swift */,
-				D989C31C2392B5CD00A2DBBE /* Logger.swift */,
-				D989C3162392B35400A2DBBE /* Constants.swift */,
-				D989C3142392B31100A2DBBE /* Extensions.swift */,
+				D92A64E623EC5ACA0089C0A5 /* Helper */,
+				D92A64E523EC5AC70089C0A5 /* App */,
+				D92A64E423EC5AC40089C0A5 /* Operation */,
 			);
 			path = MintCore;
 			sourceTree = "<group>";
@@ -180,8 +210,10 @@
 				D9A603F12392A52900F1F6D5 /* main.swift in Sources */,
 				D989C31B2392B47D00A2DBBE /* Mint.swift in Sources */,
 				D989C31D2392B5CD00A2DBBE /* Logger.swift in Sources */,
+				D92A64E323EC59670089C0A5 /* MintError.swift in Sources */,
 				D976513523EC0B350071876B /* OutputGenerator.swift in Sources */,
 				D989C3172392B35400A2DBBE /* Constants.swift in Sources */,
+				D92A64E123EC52090089C0A5 /* CommandlineParser.swift in Sources */,
 				D989C3192392B3D100A2DBBE /* Translate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 class Logger {
     
-    static func log(title: Any?, output: Any) {
+    static func log(title: Any? = nil, output: Any) {
         if let title = title {
             print(title, ":", output)
             return
