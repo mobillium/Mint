@@ -33,5 +33,6 @@ class FileHandler {
         } else {
             try doWrite()
         }
+        fputs(ANSIColors.green.rawValue + "Language keys generated.", stderr)
     }
 }

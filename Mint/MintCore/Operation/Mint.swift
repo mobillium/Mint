@@ -12,11 +12,11 @@ class Mint {
     
     static func run(withArguments rawArguments: [String]) throws {
         guard let arguments = CommandlineParser.parse(arguments: rawArguments) else {
-            throw MintError.customMessage("Usage: -i <path to Localizable.strings file> -o <path including file name to write Swift to>")
+            throw MintError.customMessage(ANSIColors.red.rawValue + "Usage: -i <path to Localizable.strings file> -o <path including file name to write Swift to>")
         }
 
         guard FileHandler.readFile(from: arguments) != nil else {
-            throw MintError.customMessage("Couldn't read files. Did you type your arguments incorrectly?")
+            throw MintError.customMessage(ANSIColors.red.rawValue + "Couldn't read files. Did you type your arguments incorrectly?")
         }
 
         try FileHandler.writeOutput(outputString: Mint.generateInputs(path: arguments), to: arguments)
@@ -25,7 +25,7 @@ class Mint {
     static func generateInputs(path: Commandline) throws -> String {
         
         guard let content = FileHandler.readFile(from: path)?.input else {
-            throw MintError.customMessage("The file could not be read")
+            throw MintError.customMessage(ANSIColors.red.rawValue + "The file could not be read")
         }
         
         let lines = content.components(separatedBy: CharacterSet.newlines)
@@ -34,6 +34,7 @@ class Mint {
         let keyValues: [Translate] = Mint.translateModel(outputPattern: results)
         let dictionary = Mint.parsedDictionary(values: keyValues)
         
+        #if DEBUG
         Logger.log(title: "CONTENTS", output: content)
         Logger.log(title: "LINES", output: lines)
         Logger.log(title: "RESULTS", output: results)
@@ -45,6 +46,7 @@ class Mint {
                 Logger.log(output: "-- " +  translate.getAttributeName())
             }
         }
+        #endif
         
         let output = OutputGenerator()
         output.append("public struct Localizations {", newLineCount: 2)

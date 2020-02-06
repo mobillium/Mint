@@ -16,9 +16,4 @@ extension String {
             (0..<match.numberOfRanges).map { match.range(at: $0).location == NSNotFound ? "" : nsString.substring(with: match.range(at: $0)) }
         } ?? []
     }
-    
-    func lowercaseFirstCharacter() -> String {
-        let firstIndex = index(after: startIndex)
-        return self[..<firstIndex].lowercased() + self[firstIndex...]
-    }
 }
