@@ -20,6 +20,7 @@
 		D989C31B2392B47D00A2DBBE /* Mint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989C31A2392B47D00A2DBBE /* Mint.swift */; };
 		D989C31D2392B5CD00A2DBBE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989C31C2392B5CD00A2DBBE /* Logger.swift */; };
 		D9A603F12392A52900F1F6D5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A603F02392A52900F1F6D5 /* main.swift */; };
+		D9D029AA23ED395700AF91DD /* CommandlineColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D029A923ED395700AF91DD /* CommandlineColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +51,7 @@
 		D9A603ED2392A52900F1F6D5 /* Mint */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mint; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A603F02392A52900F1F6D5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D9A603FA2392A80600F1F6D5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D9D029A923ED395700AF91DD /* CommandlineColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandlineColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				D92A64E023EC52090089C0A5 /* CommandlineParser.swift */,
 				D989C31C2392B5CD00A2DBBE /* Logger.swift */,
 				D92A64E223EC59670089C0A5 /* MintError.swift */,
+				D9D029A923ED395700AF91DD /* CommandlineColor.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				D989C3132392B1D000A2DBBE /* FileHandler.swift in Sources */,
 				D93E242523E80EEE00E8F18A /* Generated.swift in Sources */,
 				D989C3152392B31100A2DBBE /* Extensions.swift in Sources */,
+				D9D029AA23ED395700AF91DD /* CommandlineColor.swift in Sources */,
 				D9A603F12392A52900F1F6D5 /* main.swift in Sources */,
 				D989C31B2392B47D00A2DBBE /* Mint.swift in Sources */,
 				D989C31D2392B5CD00A2DBBE /* Logger.swift in Sources */,

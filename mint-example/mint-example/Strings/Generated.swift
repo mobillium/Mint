@@ -22,6 +22,14 @@ public struct Localizations {
 		/// Base translation: B ViewController
 		public static var Title: String = NSLocalizedString("b_screen_title", comment: "")
 
+		/// Base translation: fields must be at between {min} - {max} characters
+		public static func ErrorEmptyField(min: String, max: String) -> String {
+			var keyValue = NSLocalizedString("b_screen_error_empty_field", comment: "")
+			keyValue = keyValue.replacingOccurrences(of: "{min}", with: min)
+			keyValue = keyValue.replacingOccurrences(of: "{max}", with: max)
+			return keyValue
+		}
+
 	}
 
 	// MARK: - Home Keys

@@ -192,7 +192,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -x\n\n# Get base path to project\nBASE_PATH=\"$PROJECT_DIR/$PROJECT_NAME\"\n\n# Get path to MINT Generator script its the binary\nMINT_PATH=\"$BASE_PATH/Mint\"\n\n# Get path to main localization file (usually english).\nSOURCE_PATH=\"$BASE_PATH/Strings/Localizable.strings\"\n\n# Get path to output. If you use ObjC version of output, set implementation file (.m), as header will be generated automatically\nOUTPUT_PATH=\"$BASE_PATH/Strings/Generated.swift\"\n\n# Add permission to generator for script execution\nchmod 755 \"$MINT_PATH\"\n\"$MINT_PATH\" -i \"$SOURCE_PATH\" -o \"$OUTPUT_PATH\"\n";
+			shellScript = "# Get base path to project\nBASE_PATH=\"$PROJECT_DIR/$PROJECT_NAME\"\nMINT_PATH=\"$BASE_PATH/Mint\"\nSOURCE_PATH=\"$BASE_PATH/Strings/Localizable.strings\"\nOUTPUT_PATH=\"$BASE_PATH/Strings/Generated.swift\"\n\nchmod 755 \"$MINT_PATH\"\n\"$MINT_PATH\" -i \"$SOURCE_PATH\" -o \"$OUTPUT_PATH\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

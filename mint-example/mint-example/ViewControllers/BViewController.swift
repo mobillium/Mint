@@ -13,5 +13,6 @@ class BViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Localizations.B.Title
+        self.title = Localizations.B.ErrorEmptyField(min: "3", max: "6")
     }
 }

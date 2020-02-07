@@ -14,3 +14,4 @@
 
 // Home Screen
 "b_screen_title" = "B ViewController";
+"b_screen_error_empty_field" = "fields must be at between {min} - {max} characters";
