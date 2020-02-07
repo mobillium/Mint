@@ -15,12 +15,19 @@ struct FileData {
 
 class FileHandler {
     
+    /// Mint: The file is read from the given path.
+    /// - Parameter arguments: Commandline Arguments.
+    /// - Return: FileData. Optional.
     static func readFile(from arguments: Commandline) -> FileData? {
         let outputFileData = try? String(contentsOf: arguments.outputURL)
         guard let inputFileData = try? String(contentsOf: arguments.inputURL) else { return nil }
         return FileData(input: inputFileData, output: outputFileData)
     }
     
+    /// Mint:
+    /// - Parameters:
+    ///   - outputString: The value of the String to write.
+    ///   - arguments: Commandline Arguments
     static func writeOutput(outputString: String, to arguments: Commandline) throws {
         let doWrite = {
             try outputString.write(to: arguments.outputURL, atomically: true, encoding: .utf8)

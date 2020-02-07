@@ -15,6 +15,9 @@ struct Commandline {
 
 struct CommandlineParser {
     
+    /// Mint:
+    /// - Parameter arguments: Commandline Arguments
+    /// Return: return Commandline model
     static func parse(arguments: [String]) -> Commandline? {
         let lowercaseArguments = arguments.map({ $0.lowercased() })
         guard let inputCommandIndex = lowercaseArguments.firstIndex(of: "-i"),

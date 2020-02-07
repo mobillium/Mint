@@ -29,12 +29,21 @@ public class OutputGenerator {
         return lines.joined()
     }
     
+    /// Mint: Sets the carriage return and down row settings.
+    /// - Parameters:
+    ///   - string: The value of the text to write.
+    ///   - depth: Carriage return value.
+    ///   - newLineCount: newLine value.
     public func append(_ string: String, depth: Int = 0, newLineCount: Int = 1) {
         let depthString = String(repeating: "\t", count: depth)
         let newLineString = String(repeating: "\n", count: newLineCount)
         lines.append(depthString + string + newLineString)
     }
     
+    /// Mint: Converts the received value to the struct structure.
+    /// - Parameters:
+    ///   - screenName: Needs screen name.
+    ///   - translates: Needs translations.
     public func append(_ screenName: String, _ translates: [Translate]) {
         append("// MARK: - \(screenName) Keys", depth: 1)
         append("public struct \(screenName) {", depth: 1, newLineCount: 2)
@@ -44,6 +53,8 @@ public class OutputGenerator {
         append("}", depth: 1, newLineCount: 2)
     }
     
+    /// Mint: Creates the keys.
+    /// - Parameter translate: Needs translation.
     public func append(_ translate: Translate) {
         append("/// Base translation: " + translate.value, depth: 2)
         

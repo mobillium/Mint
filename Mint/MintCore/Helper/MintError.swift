@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// For commandline messages
 enum MintError: LocalizedError {
     case customMessage(String)
 

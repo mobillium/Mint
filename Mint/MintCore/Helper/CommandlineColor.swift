@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// For commandline colored messages
 enum ANSIColors: String {
     case red = "\u{001B}[0;31m"
     case green = "\u{001B}[0;32m"
