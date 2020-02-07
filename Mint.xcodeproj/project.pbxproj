@@ -159,6 +159,7 @@
 				D9A603E92392A52900F1F6D5 /* Sources */,
 				D9A603EA2392A52900F1F6D5 /* Frameworks */,
 				D9A603EB2392A52900F1F6D5 /* CopyFiles */,
+				D9D029CD23ED6BB200AF91DD /* Copy Mint File */,
 			);
 			buildRules = (
 			);
@@ -201,6 +202,27 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D9D029CD23ED6BB200AF91DD /* Copy Mint File */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Mint File";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ${BUILT_PRODUCTS_DIR}/Mint ${PROJECT_DIR}/mint-example/mint-example\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9A603E92392A52900F1F6D5 /* Sources */ = {
