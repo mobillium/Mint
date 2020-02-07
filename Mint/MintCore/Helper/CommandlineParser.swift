@@ -18,9 +18,10 @@ struct CommandlineParser {
     static func parse(arguments: [String]) -> Commandline? {
         let lowercaseArguments = arguments.map({ $0.lowercased() })
         guard let inputCommandIndex = lowercaseArguments.firstIndex(of: "-i"),
-            let outputCommandIndex = lowercaseArguments.firstIndex(of: "-o"),
-            inputCommandIndex <= arguments.count - 2, outputCommandIndex <= arguments.count - 2,
-            inputCommandIndex + 1 != outputCommandIndex, outputCommandIndex + 1 != inputCommandIndex else { return nil }
+              let outputCommandIndex = lowercaseArguments.firstIndex(of: "-o"),
+              inputCommandIndex <= arguments.count - 2, outputCommandIndex <= arguments.count - 2,
+              inputCommandIndex + 1 != outputCommandIndex, outputCommandIndex + 1 != inputCommandIndex
+        else { return nil }
 
         let inputURLString = arguments[inputCommandIndex + 1]
         let outputURLString = arguments[outputCommandIndex + 1]

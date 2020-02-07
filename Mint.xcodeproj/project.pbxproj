@@ -133,8 +133,8 @@
 		D9A603F82392A7B000F1F6D5 /* MintCore */ = {
 			isa = PBXGroup;
 			children = (
-				D92A64E623EC5ACA0089C0A5 /* Helper */,
 				D92A64E523EC5AC70089C0A5 /* App */,
+				D92A64E623EC5ACA0089C0A5 /* Helper */,
 				D92A64E423EC5AC40089C0A5 /* Operation */,
 			);
 			path = MintCore;
