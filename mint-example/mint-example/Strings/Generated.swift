@@ -19,7 +19,7 @@ public struct Localizations {
 	// MARK: - B Keys
 	public struct B {
 
-		/// Base translation: B ViewController
+		/// Base translation: Register \"Title %s5
 		public static var Title: String = NSLocalizedString("b_screen_title", comment: "")
 
 		/// Base translation: fields must be at between {min} - {max} characters

@@ -15,7 +15,7 @@ struct Commandline {
 
 struct CommandlineParser {
     
-    /// Mint:
+    /// Mint: Reads Commandline arguments.
     /// - Parameter arguments: Commandline Arguments
     /// Return: return Commandline model
     static func parse(arguments: [String]) -> Commandline? {

@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   mint-example
 
@@ -10,8 +10,10 @@
 "home_screen_title" = "Home";
 
 // Home Screen
-"a_screen_title" = "A ViewController";
+"a_screen_title" = "A ViewController"; // deneme
 
 // Home Screen
-"b_screen_title" = "B ViewController";
+"b_screen_title" = "Register \"Title %s5"; // " canim istedigi icin koydum;
 "b_screen_error_empty_field" = "fields must be at between {min} - {max} characters";
+// "b_screen_title" = "Register \"Title %s5"; // " canim istedigi icin koydum;
+//"b_screen_error_empty_field" = "fields must be at between {min} - {max} characters";
