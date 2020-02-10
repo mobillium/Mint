@@ -8,7 +8,12 @@
 
 class Logger {
     
-    static func log(title: Any?, output: Any) {
+    
+    /// Mint: Debug outputs.
+    /// - Parameters:
+    ///   - title: Needs title. Optional
+    ///   - output: Needs output. Required
+    static func log(title: Any? = nil, output: Any) {
         if let title = title {
             print(title, ":", output)
             return

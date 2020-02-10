@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Translate {
+public struct Translate {
     
     var key: String
     var value: String
@@ -25,9 +25,12 @@ struct Translate {
         } else if key.contains(SCREEN) {
             screenName = key.components(separatedBy: SCREEN).first!
         } else {
-            print("Invalid format.")
+            #if DEBUG
+            Logger.log(output: "Invalid screen name format.")
+            #endif
+            MintError.customMessage(ANSIColors.yellow.rawValue + "Invalid screen name format.")
         }
-        return screenName
+        return screenName.split(separator: "_").map({$0.capitalized}).joined()
     }
     
     public func getAttributeName() -> String {
@@ -37,8 +40,19 @@ struct Translate {
         } else if key.contains(SCREEN) {
             attributeName = key.components(separatedBy: SCREEN).last!
         } else {
-            print("Invalid format.")
+            #if DEBUG
+            Logger.log(output: "Invalid attribute name format.")
+            #endif
+            MintError.customMessage(ANSIColors.yellow.rawValue + "Invalid screen name format.")
         }
-        return attributeName
+        return attributeName.split(separator: "_").map({$0.capitalized}).joined()
+    }
+    
+    public func hasParameters() -> Bool {
+        return !getParameters().isEmpty
+    }
+    
+    public func getParameters() -> [String] {
+        return value.match(PARAMETERS).map({$0[1]})
     }
 }

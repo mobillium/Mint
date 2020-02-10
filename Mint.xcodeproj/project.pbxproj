@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92A64E123EC52090089C0A5 /* CommandlineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A64E023EC52090089C0A5 /* CommandlineParser.swift */; };
+		D92A64E323EC59670089C0A5 /* MintError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92A64E223EC59670089C0A5 /* MintError.swift */; };
 		D93E242523E80EEE00E8F18A /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E242423E80EEE00E8F18A /* Generated.swift */; };
 		D93E242623E8112B00E8F18A /* Generated.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = D93E242423E80EEE00E8F18A /* Generated.swift */; };
-		D976513523EC0B350071876B /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976513423EC0B350071876B /* Generator.swift */; };
+		D976513523EC0B350071876B /* OutputGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976513423EC0B350071876B /* OutputGenerator.swift */; };
 		D989C3112392A8AC00A2DBBE /* Localizable.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9A603FA2392A80600F1F6D5 /* Localizable.strings */; };
 		D989C3132392B1D000A2DBBE /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989C3122392B1D000A2DBBE /* FileHandler.swift */; };
 		D989C3152392B31100A2DBBE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989C3142392B31100A2DBBE /* Extensions.swift */; };
@@ -18,6 +20,7 @@
 		D989C31B2392B47D00A2DBBE /* Mint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989C31A2392B47D00A2DBBE /* Mint.swift */; };
 		D989C31D2392B5CD00A2DBBE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989C31C2392B5CD00A2DBBE /* Logger.swift */; };
 		D9A603F12392A52900F1F6D5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A603F02392A52900F1F6D5 /* main.swift */; };
+		D9D029AA23ED395700AF91DD /* CommandlineColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D029A923ED395700AF91DD /* CommandlineColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +38,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D92A64E023EC52090089C0A5 /* CommandlineParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandlineParser.swift; sourceTree = "<group>"; };
+		D92A64E223EC59670089C0A5 /* MintError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintError.swift; sourceTree = "<group>"; };
 		D93E242423E80EEE00E8F18A /* Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generated.swift; sourceTree = "<group>"; };
-		D976513423EC0B350071876B /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		D976513423EC0B350071876B /* OutputGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputGenerator.swift; sourceTree = "<group>"; };
 		D989C3122392B1D000A2DBBE /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 		D989C3142392B31100A2DBBE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D989C3162392B35400A2DBBE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		D9A603ED2392A52900F1F6D5 /* Mint */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mint; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A603F02392A52900F1F6D5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D9A603FA2392A80600F1F6D5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D9D029A923ED395700AF91DD /* CommandlineColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandlineColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D92A64E423EC5AC40089C0A5 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				D989C31A2392B47D00A2DBBE /* Mint.swift */,
+				D989C3122392B1D000A2DBBE /* FileHandler.swift */,
+				D976513423EC0B350071876B /* OutputGenerator.swift */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		D92A64E523EC5AC70089C0A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D989C3162392B35400A2DBBE /* Constants.swift */,
+				D989C3182392B3D100A2DBBE /* Translate.swift */,
+				D989C3142392B31100A2DBBE /* Extensions.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D92A64E623EC5ACA0089C0A5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D989C31C2392B5CD00A2DBBE /* Logger.swift */,
+				D92A64E223EC59670089C0A5 /* MintError.swift */,
+				D9D029A923ED395700AF91DD /* CommandlineColor.swift */,
+				D92A64E023EC52090089C0A5 /* CommandlineParser.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		D9A603E42392A52900F1F6D5 = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +133,9 @@
 		D9A603F82392A7B000F1F6D5 /* MintCore */ = {
 			isa = PBXGroup;
 			children = (
-				D989C31A2392B47D00A2DBBE /* Mint.swift */,
-				D989C3122392B1D000A2DBBE /* FileHandler.swift */,
-				D989C3142392B31100A2DBBE /* Extensions.swift */,
-				D989C3162392B35400A2DBBE /* Constants.swift */,
-				D989C3182392B3D100A2DBBE /* Translate.swift */,
-				D989C31C2392B5CD00A2DBBE /* Logger.swift */,
-				D976513423EC0B350071876B /* Generator.swift */,
+				D92A64E523EC5AC70089C0A5 /* App */,
+				D92A64E623EC5ACA0089C0A5 /* Helper */,
+				D92A64E423EC5AC40089C0A5 /* Operation */,
 			);
 			path = MintCore;
 			sourceTree = "<group>";
@@ -126,6 +159,7 @@
 				D9A603E92392A52900F1F6D5 /* Sources */,
 				D9A603EA2392A52900F1F6D5 /* Frameworks */,
 				D9A603EB2392A52900F1F6D5 /* CopyFiles */,
+				D9D029CD23ED6BB200AF91DD /* Copy Mint File */,
 			);
 			buildRules = (
 			);
@@ -143,7 +177,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Mustafa GUNES";
 				TargetAttributes = {
 					D9A603EC2392A52900F1F6D5 = {
@@ -169,6 +203,27 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D9D029CD23ED6BB200AF91DD /* Copy Mint File */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Mint File";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ${BUILT_PRODUCTS_DIR}/Mint ${PROJECT_DIR}/mint-example/mint-example\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9A603E92392A52900F1F6D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -177,11 +232,14 @@
 				D989C3132392B1D000A2DBBE /* FileHandler.swift in Sources */,
 				D93E242523E80EEE00E8F18A /* Generated.swift in Sources */,
 				D989C3152392B31100A2DBBE /* Extensions.swift in Sources */,
+				D9D029AA23ED395700AF91DD /* CommandlineColor.swift in Sources */,
 				D9A603F12392A52900F1F6D5 /* main.swift in Sources */,
 				D989C31B2392B47D00A2DBBE /* Mint.swift in Sources */,
 				D989C31D2392B5CD00A2DBBE /* Logger.swift in Sources */,
-				D976513523EC0B350071876B /* Generator.swift in Sources */,
+				D92A64E323EC59670089C0A5 /* MintError.swift in Sources */,
+				D976513523EC0B350071876B /* OutputGenerator.swift in Sources */,
 				D989C3172392B35400A2DBBE /* Constants.swift in Sources */,
+				D92A64E123EC52090089C0A5 /* CommandlineParser.swift in Sources */,
 				D989C3192392B3D100A2DBBE /* Translate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +363,9 @@
 		D9A603F52392A52900F1F6D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(EMBEDDED_CONTENT_CONTAINS_SWIFT)";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DVHX5WRRH;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -316,6 +377,9 @@
 		D9A603F62392A52900F1F6D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(EMBEDDED_CONTENT_CONTAINS_SWIFT)";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DVHX5WRRH;
 				ENABLE_HARDENED_RUNTIME = YES;
