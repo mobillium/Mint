@@ -15,9 +15,9 @@
 		D9B9C51923EC67CB005A39C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9C51823EC67CB005A39C3 /* HomeViewController.swift */; };
 		D9B9C51B23EC67E2005A39C3 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9C51A23EC67E2005A39C3 /* AViewController.swift */; };
 		D9B9C51D23EC67EC005A39C3 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9C51C23EC67EC005A39C3 /* BViewController.swift */; };
-		D9B9C51F23EC683C005A39C3 /* Mint in Resources */ = {isa = PBXBuildFile; fileRef = D9B9C51E23EC683C005A39C3 /* Mint */; };
-		D9B9C52323EC6883005A39C3 /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9C52223EC6883005A39C3 /* Generated.swift */; };
 		D9B9C52523EC6897005A39C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9B9C52423EC6897005A39C3 /* Localizable.strings */; };
+		D9D029C023ED5FA300AF91DD /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D029BF23ED5FA300AF91DD /* Generated.swift */; };
+		D9D029CF23ED6E7300AF91DD /* Mint in Resources */ = {isa = PBXBuildFile; fileRef = D9D029CE23ED6E7300AF91DD /* Mint */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		D9B9C51823EC67CB005A39C3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9B9C51A23EC67E2005A39C3 /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		D9B9C51C23EC67EC005A39C3 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
-		D9B9C51E23EC683C005A39C3 /* Mint */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = Mint; sourceTree = "<group>"; };
-		D9B9C52223EC6883005A39C3 /* Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generated.swift; sourceTree = "<group>"; };
 		D9B9C52423EC6897005A39C3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D9D029BF23ED5FA300AF91DD /* Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generated.swift; sourceTree = "<group>"; };
+		D9D029CE23ED6E7300AF91DD /* Mint */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = Mint; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		D9B9C4FB23EC666D005A39C3 /* mint-example */ = {
 			isa = PBXGroup;
 			children = (
-				D9B9C51E23EC683C005A39C3 /* Mint */,
+				D9D029CE23ED6E7300AF91DD /* Mint */,
 				D9B9C52123EC6874005A39C3 /* Strings */,
 				D9B9C51623EC669A005A39C3 /* App */,
 				D9B9C51723EC66A1005A39C3 /* ViewControllers */,
@@ -100,7 +100,7 @@
 		D9B9C52123EC6874005A39C3 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				D9B9C52223EC6883005A39C3 /* Generated.swift */,
+				D9D029BF23ED5FA300AF91DD /* Generated.swift */,
 				D9B9C52423EC6897005A39C3 /* Localizable.strings */,
 			);
 			path = Strings;
@@ -113,10 +113,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9B9C50D23EC666F005A39C3 /* Build configuration list for PBXNativeTarget "mint-example" */;
 			buildPhases = (
+				D9B9C52023EC685D005A39C3 /* Mint */,
 				D9B9C4F523EC666D005A39C3 /* Sources */,
 				D9B9C4F623EC666D005A39C3 /* Frameworks */,
 				D9B9C4F723EC666D005A39C3 /* Resources */,
-				D9B9C52023EC685D005A39C3 /* Mint */,
 			);
 			buildRules = (
 			);
@@ -165,11 +165,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B9C51F23EC683C005A39C3 /* Mint in Resources */,
 				D9B9C50923EC666F005A39C3 /* LaunchScreen.storyboard in Resources */,
 				D9B9C52523EC6897005A39C3 /* Localizable.strings in Resources */,
 				D9B9C50623EC666F005A39C3 /* Assets.xcassets in Resources */,
 				D9B9C50423EC666D005A39C3 /* Main.storyboard in Resources */,
+				D9D029CF23ED6E7300AF91DD /* Mint in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +192,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Get base path to project\nBASE_PATH=\"$PROJECT_DIR/$PROJECT_NAME\"\nMINT_PATH=\"$BASE_PATH/Mint\"\nSOURCE_PATH=\"$BASE_PATH/Strings/Localizable.strings\"\nOUTPUT_PATH=\"$BASE_PATH/Strings/Generated.swift\"\n\nchmod 755 \"$MINT_PATH\"\n\"$MINT_PATH\" -i \"$SOURCE_PATH\" -o \"$OUTPUT_PATH\"\n";
+			shellScript = "# Get base path to project\nBASE_PATH=\"$PROJECT_DIR/$PROJECT_NAME\"\nMINT_PATH=\"$BASE_PATH/Mint\"\nSOURCE_PATH=\"$BASE_PATH/Strings/Localizable.strings\"\nOUTPUT_PATH=\"$BASE_PATH/Strings/Generated.swift\"\n\nchmod +x \"$MINT_PATH\"\n\"$MINT_PATH\" -i \"$SOURCE_PATH\" -o \"$OUTPUT_PATH\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -202,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B9C51B23EC67E2005A39C3 /* AViewController.swift in Sources */,
-				D9B9C52323EC6883005A39C3 /* Generated.swift in Sources */,
+				D9D029C023ED5FA300AF91DD /* Generated.swift in Sources */,
 				D9B9C4FD23EC666D005A39C3 /* AppDelegate.swift in Sources */,
 				D9B9C4FF23EC666D005A39C3 /* SceneDelegate.swift in Sources */,
 				D9B9C51D23EC67EC005A39C3 /* BViewController.swift in Sources */,
